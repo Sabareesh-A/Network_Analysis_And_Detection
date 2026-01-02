@@ -1,13 +1,13 @@
-# Snort 3.9 IPS Setup in Kali Linux (Windows VM)
+# Snort 3.9 IPS Setup in Kali Linux (macOS M2)
 
 ## Overview
-This project documents the installation and configuration of **Snort 3.9**, an open-source Intrusion Prevention System (IPS), in **Kali Linux** running inside a **Windows Virtual Machine**.  
+This project documents the installation and configuration of **Snort 3.9**, an open-source Intrusion Prevention System (IPS), in **Kali Linux** running on **macOS (Apple M2)**.  
 Unlike IDS mode, IPS actively blocks malicious traffic inline, enforcing security policies in real time.
 
 ---
 
 ## Environment
-- **Host OS:** Windows 11  
+- **Host OS:** macOS (Apple M2)
 - **Virtualization Tool:** VirtualBox 
 - **Guest OS:** Kali Linux 
 - **Network Mode:** Bridged  
@@ -72,7 +72,7 @@ sudo nano /etc/snort/rules/local.rules
 sudo snort -c /etc/snort/snort.lua -R /etc/snort/rules/local.rules -Q --daq nfq -i eth0
 ```
 ## Conclusion
-The Snort 3.9 IPS setup in Kali Linux on a Windows VM was successfully implemented and tested.
+The Snort 3.9 IPS setup in Kali Linux on macOS (Apple M2) was successfully implemented and tested.
 Snort actively blocked malicious traffic (ICMP) while allowing legitimate services (HTTP, SSH), proving its effectiveness as an Intrusion Prevention System.
 This project demonstrates hands-on experience in Snort IPS mode, proactive defense, and inline traffic control.
   

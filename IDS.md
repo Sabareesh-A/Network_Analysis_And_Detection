@@ -1,13 +1,13 @@
-# Snort 3.9 IDS Setup in Kali Linux (Windows VM)
+# Snort 3.9 IDS Setup in Kali Linux (macOS M2)
 
 ## Overview
-This project documents the installation and configuration of **Snort 3.9**, an open-source Intrusion Detection System (IDS), in **Kali Linux** running inside a **Windows Virtual Machine**.  
+This project documents the installation and configuration of **Snort 3.9**, an open-source Intrusion Detection System (IDS), in **Kali Linux** running on **macOS (Apple M2)**.  
 The goal is to monitor network traffic, detect suspicious activity, and simulate real-world intrusion detection scenarios.
 
 ---
 
 ## Environment
-- **Host OS:** Windows 11  
+- **Host OS:** macOS (Apple M2)
 - **Virtualization Tool:** VirtualBox 
 - **Guest OS:** Kali Linux 
 - **Network Mode:** Bridged  
@@ -78,7 +78,7 @@ sudo nano /etc/snort/rules/local.rules
 sudo snort -c /etc/snort/snort.lua -R /etc/snort/rules/local.rules -i eth0 -A alert_fast
 ```
 ## Conclusion
-The Snort 3.9 IDS setup in Kali Linux on a Windows VM was successfully implemented and tested.
+The Snort 3.9 IDS setup in Kali Linux on macOS (Apple M2) was successfully implemented and tested.
 Snort detected and logged suspicious traffic based on custom rules, proving its effectiveness as a modern intrusion detection system.
 This project demonstrates hands-on experience in Snort 3.x, network security monitoring, and rule-based traffic analysis
 

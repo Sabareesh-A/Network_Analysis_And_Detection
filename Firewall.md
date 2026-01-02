@@ -1,13 +1,13 @@
-# Firewall Setup in Kali Linux (Windows VM)
+# Firewall Setup in Kali Linux (macOS M2)
 
 ## Overview
-This project documents the setup and configuration of a firewall in **Kali Linux** using **UFW (Uncomplicated Firewall)**, running inside a **Windows Virtual Machine**.  
+This project documents the setup and configuration of a firewall in **Kali Linux** using **UFW (Uncomplicated Firewall)**, running on **macOS (Apple M2)**.  
 The goal is to practice firewall rule configuration, secure VM traffic, and simulate real-world defense scenarios.
 
 ---
 
 ## Environment
-- **Host OS:** Windows 11  
+- **Host OS:** macOS (Apple M2)
 - **Virtualization Tool:** VirtualBox 
 - **Guest OS:** Kali Linux  
 - **Network Mode:** Bridged  
@@ -89,7 +89,7 @@ namp <vm_ip>
 ```
 ## Conclusion
 
-The firewall setup in Kali Linux using UFW within a Windows VM was successfully implemented and tested.
+The firewall setup in Kali Linux using UFW on macOS (Apple M2) was successfully implemented and tested.
 All configured rules — including SSH (22), HTTP (80), HTTPS (443), and ICMP blocking — worked as expected.
 Testing with ping, curl, ssh, and nmap confirmed that the firewall rules were effective, proving the setup to be secure and reliable.
 This project demonstrates not only the practical application of UFW but also the importance of proactive defense in cybersecurity.

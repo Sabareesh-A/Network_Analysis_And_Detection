@@ -31,7 +31,7 @@ The incident chain begins when the user at `192.168.232.162` attempts to access 
 
 The filter immediately reveals a multicast query from `192.168.232.162` asking "Who has FILESHAARE?". This is the bait.
 
-![LLMNR Query](./Screenshots/1.png)
+![LLMNR Query](./screenshots/1.png)
 **Figure 1:** The victim machine `192.168.232.162` broadcasting for `FILESHAARE`.
 
 ### 2. The Attack: LLMNR Poisoning 
@@ -40,7 +40,7 @@ The attacker's machine at `192.168.232.215` is running a tool like **Responder**
 
 By responding first, the attacker wins the race against any potential legitimate server and successfully poisons the victim's name resolution cache. The victim now believes the attacker's machine is the intended destination.
 
-![LLMNR Response](./Screenshots/2.png)
+![LLMNR Response](./screenshots/2.png)
 **Figure 2:** The attacker `192.168.232.215` falsely claiming to be the requested host.
 
 ### 3. The Prize: Capturing the NTLMv2 Hash 
@@ -52,7 +52,7 @@ Trusting the malicious response, the victim's machine proceeds to authenticate w
 
 By inspecting the SMB2 "Session Setup Request," we can clearly see the username `janesmith` and the captured NTLMv2 hash.
 
-![SMB Handshake](./Screenshots/3.png)
+![SMB Handshake](./screenshots/3.png)
 **Figure 3:** The user `janesmith`'s NTLMv2 hash being sent to the attacker.
 
 ### 4. The Goal: Lateral Movement 
@@ -65,7 +65,7 @@ The attacker connects to the `IPC$` (Inter-Process Communication) share, a commo
 
 The successful "Tree Connect Request" and "Tree Connect Response" confirm that the stolen credentials were valid for `AccountingPC`.
 
-![Lateral Movement](./Screenshots/4.png)
+![Lateral Movement](./screenshots/4.png)
 **Figure 4:** The attacker successfully connecting to `AccountingPC` using the stolen credentials.
 
 ---
